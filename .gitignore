@@ -1,0 +1,5 @@
+# Fetched full-text papers are kept LOCAL and UNTRACKED.
+# §0.1: never commit copyrighted full text — the derived record in BIBLIOGRAPHY.md and
+# references.bib is the committed substitute. The FAIR checker's FR8 denylist also fails
+# on any tracked PDF outside figures/. Keep source PDFs here, locally, only.
+docs/sources/pdfs/
