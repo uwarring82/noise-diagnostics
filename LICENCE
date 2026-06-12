@@ -1,0 +1,26 @@
+# Licensing — The Statistical Turn in Trapped-Ion Noise Diagnostics
+
+This repository is multi-licensed **by folder and layer** (CD 1.8.2 §0.3 / §14A.5).
+Where a folder mixes layers, the more restrictive licence applies unless a file declares
+its own (e.g. an SPDX header or a per-folder `LICENCE`).
+
+| Path                                                          | Layer                          | Licence            | SPDX               |
+| ------------------------------------------------------------ | ------------------------------ | ------------------ | ------------------ |
+| `essays/*.md` (the Sail)                                     | Authored work                  | CC BY-NC-SA 4.0    | `CC-BY-NC-SA-4.0`  |
+| `GLOSSARY.md` definitions, `BIBLIOGRAPHY.md`, `OUTREACH.md`  | Profile / Coastline            | CC BY-SA 4.0       | `CC-BY-SA-4.0`     |
+| `GLOSSARY.md` interpretive notes                             | Sail (Harbourmaster discretion)| CC BY-NC-SA 4.0    | `CC-BY-NC-SA-4.0`  |
+| `README.md`, `index.html`, CSS snippets                      | Page chrome                    | MIT                | `MIT`              |
+| `CITATION.cff`                                               | Metadata (declares work licence)| —                 | —                  |
+| `references.bib`                                             | Bibliographic record           | CC BY-SA 4.0       | `CC-BY-SA-4.0`     |
+| `assets/*` (Model B copies)                                  | Design assets                  | MIT                | `MIT`              |
+| `tools/fair_check.sh` (Model B copy)                         | Infrastructure                 | MIT                | `MIT`              |
+
+The licence of the *work itself* (for citation) is declared in `CITATION.cff`
+(`license: CC-BY-NC-SA-4.0`).
+
+## Canonical licence texts
+- **MIT** — full text in [`assets/LICENCE`](assets/LICENCE) and [`tools/LICENCE`](tools/LICENCE).
+- **CC BY-NC-SA 4.0** — https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+- **CC BY-SA 4.0** — https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+Built against blueprint CD 1.8.2 (`cd-rules`@`a61ad52`, tag `cd-1.8.2`).

@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "The Statistical Turn in Trapped-Ion Noise Diagnostics"
+abstract: >-
+  An operational framework (the Decision Engine) that classifies electromagnetically
+  coupled motional noise on a single trapped ion into three statistical classes
+  (Gaussian diffusion, compound-Poisson jumps, Lévy-type heavy tails), with a numbered
+  decision protocol and a three-pillar validation architecture.
+type: software            # CFF supports software|dataset; reviewer call (D-3)
+authors:
+  - family-names: Warring
+    given-names: Ulrich
+    affiliation: "Physikalisches Institut, Albert-Ludwigs-Universität Freiburg"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"   # reviewer to fill + verify (FR2)
+version: "0.1.0"
+date-released: "2026-06-12"
+url: "https://github.com/threehouse-plus-ec/noise-diagnostics"
+repository-code: "https://github.com/threehouse-plus-ec/noise-diagnostics"
+license: CC-BY-NC-SA-4.0   # licence of the *work*; folder licences per repo LICENCE (§0.3)
+keywords:
+  - trapped ions
+  - motional decoherence
+  - anomalous heating
+  - noise classification
+  - Lévy–Khintchine
