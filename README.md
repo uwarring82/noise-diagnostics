@@ -26,6 +26,7 @@ from external [Coastlines](GLOSSARY.md#coastline) without restating it.
 > Standard-Model electrodynamics and quantum mechanics are external Coastlines.
 
 ## What this repository contains
+- **[Live site →](https://uwarring82.github.io/noise-diagnostics/)** — this work rendered as a website (essay, glossary, bibliography).
 - [`essays/`](essays/) — the Sail (the full framework).
 - [`GLOSSARY.md`](GLOSSARY.md), [`CITATION.cff`](CITATION.cff), [`logbook/`](logbook/) — FAIR minimal floor.
 - [`BIBLIOGRAPHY.md`](BIBLIOGRAPHY.md), [`references.bib`](references.bib), [`OUTREACH.md`](OUTREACH.md) — FAIR full profile.
