@@ -1,8 +1,10 @@
 % references.bib — git-tracked machine-readable record (FR8, §14A.5).
 % Identifiers verified at init (DOI resolves at doi.org; title/authors via Crossref;
-% arXiv via the arXiv API). See logbook/2026-06-12-init.md and BIBLIOGRAPHY.md.
-% Exact page ranges / record-vs-work fidelity are the reviewer leg (§14A.9).
+% arXiv via the arXiv API; book ISBNs via OpenLibrary). See logbook/2026-06-12-init.md
+% and BIBLIOGRAPHY.md. Exact page ranges / record-vs-work fidelity are the reviewer leg
+% (§14A.9). Access (OA vs paywalled) is annotated in BIBLIOGRAPHY.md.
 
+% --- Ion-trap motional heating & electric-field noise ----------------------------------
 @article{brownnutt2015,
   author        = {Brownnutt, M. and Kumph, M. and Rabl, P. and Blatt, R.},
   title         = {Ion-trap measurements of electric-field noise near surfaces},
@@ -15,6 +17,61 @@
   archivePrefix = {arXiv}
 }
 
+@article{turchette2000,
+  author        = {Turchette, Q. A. and Kielpinski, D. and King, B. E. and Leibfried, D. and Meekhof, D. M. and Myatt, C. J. and Rowe, M. A. and Sackett, C. A. and Wood, C. S. and Itano, W. M. and Monroe, C. and Wineland, D. J.},
+  title         = {Heating of trapped ions from the quantum ground state},
+  journal       = {Physical Review A},
+  volume        = {61},
+  pages         = {063418},
+  year          = {2000},
+  doi           = {10.1103/PhysRevA.61.063418},
+  eprint        = {quant-ph/0002040},
+  archivePrefix = {arXiv}
+}
+
+@article{deslauriers2006,
+  author        = {Deslauriers, L. and Olmschenk, S. and Stick, D. and Hensinger, W. K. and Sterk, J. and Monroe, C.},
+  title         = {Scaling and suppression of anomalous heating in ion traps},
+  journal       = {Physical Review Letters},
+  volume        = {97},
+  pages         = {103007},
+  year          = {2006},
+  doi           = {10.1103/PhysRevLett.97.103007},
+  eprint        = {quant-ph/0602003},
+  archivePrefix = {arXiv}
+}
+
+% --- Open quantum systems: master-equation structure -----------------------------------
+@article{davies1974,
+  author  = {Davies, E. B.},
+  title   = {Markovian master equations},
+  journal = {Communications in Mathematical Physics},
+  volume  = {39},
+  pages   = {91},
+  year    = {1974},
+  doi     = {10.1007/BF01608389}
+}
+
+@article{gks1976,
+  author  = {Gorini, V. and Kossakowski, A. and Sudarshan, E. C. G.},
+  title   = {Completely positive dynamical semigroups of {N}-level systems},
+  journal = {Journal of Mathematical Physics},
+  volume  = {17},
+  pages   = {821},
+  year    = {1976},
+  doi     = {10.1063/1.522979}
+}
+
+@article{lindblad1976,
+  author  = {Lindblad, G.},
+  title   = {On the generators of quantum dynamical semigroups},
+  journal = {Communications in Mathematical Physics},
+  volume  = {48},
+  pages   = {119},
+  year    = {1976},
+  doi     = {10.1007/BF01608499}
+}
+
 @article{holevo1996,
   author  = {Holevo, A. S.},
   title   = {Covariant quantum Markovian evolutions},
@@ -23,6 +80,28 @@
   pages   = {1812},
   year    = {1996},
   doi     = {10.1063/1.531481}
+}
+
+@book{breuer2007,
+  author    = {Breuer, Heinz-Peter and Petruccione, Francesco},
+  title     = {The Theory of Open Quantum Systems},
+  publisher = {Oxford University Press},
+  year      = {2007},
+  isbn      = {9780199213900},
+  doi       = {10.1093/acprof:oso/9780199213900.001.0001}
+}
+
+% --- Collisional decoherence / quantum linear Boltzmann equation -----------------------
+@article{hornberger2006,
+  author        = {Hornberger, Klaus},
+  title         = {Master equation for a quantum particle in a gas},
+  journal       = {Physical Review Letters},
+  volume        = {97},
+  pages         = {060601},
+  year          = {2006},
+  doi           = {10.1103/PhysRevLett.97.060601},
+  eprint        = {quant-ph/0607085},
+  archivePrefix = {arXiv}
 }
 
 @article{vacchini2009,
@@ -35,4 +114,46 @@
   doi           = {10.1016/j.physrep.2009.06.001},
   eprint        = {0904.3911},
   archivePrefix = {arXiv}
+}
+
+% --- Lévy processes, anomalous diffusion & heavy-tail inference ------------------------
+@book{sato1999,
+  author    = {Sato, Ken-iti},
+  title     = {Lévy Processes and Infinitely Divisible Distributions},
+  series    = {Cambridge Studies in Advanced Mathematics},
+  publisher = {Cambridge University Press},
+  year      = {1999},
+  isbn      = {9780521553025}
+}
+
+@article{metzler2000,
+  author  = {Metzler, Ralf and Klafter, Joseph},
+  title   = {The random walk's guide to anomalous diffusion: a fractional dynamics approach},
+  journal = {Physics Reports},
+  volume  = {339},
+  pages   = {1},
+  year    = {2000},
+  doi     = {10.1016/S0370-1573(00)00070-3}
+}
+
+@article{clauset2009,
+  author        = {Clauset, Aaron and Shalizi, Cosma Rohilla and Newman, M. E. J.},
+  title         = {Power-law distributions in empirical data},
+  journal       = {SIAM Review},
+  volume        = {51},
+  pages         = {661},
+  year          = {2009},
+  doi           = {10.1137/070710111},
+  eprint        = {0706.1062},
+  archivePrefix = {arXiv}
+}
+
+@article{hill1975,
+  author  = {Hill, Bruce M.},
+  title   = {A simple general approach to inference about the tail of a distribution},
+  journal = {The Annals of Statistics},
+  volume  = {3},
+  pages   = {1163},
+  year    = {1975},
+  doi     = {10.1214/aos/1176343247}
 }
