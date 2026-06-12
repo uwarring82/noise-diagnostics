@@ -14,8 +14,8 @@ authors:
     # orcid: "https://orcid.org/0000-0000-0000-0000"   # reviewer to fill + verify (FR2)
 version: "0.1.0"
 date-released: "2026-06-12"
-url: "https://github.com/threehouse-plus-ec/noise-diagnostics"
-repository-code: "https://github.com/threehouse-plus-ec/noise-diagnostics"
+url: "https://github.com/uwarring82/noise-diagnostics"
+repository-code: "https://github.com/uwarring82/noise-diagnostics"
 license: CC-BY-NC-SA-4.0   # licence of the *work*; folder licences per repo LICENCE (§0.3)
 keywords:
   - trapped ions
