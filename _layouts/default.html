@@ -105,8 +105,12 @@
     pre code { background: none; border: 0; padding: 0; font-size: 1em; }
 
     /* ---- Tables (CD §6 rules: open edges, mono headers, serif cells, HORIZONTAL separators only) ---- */
-    .content table, .content > table { display: block; overflow-x: auto; width: 100%; }
-    table { border-collapse: collapse; border-spacing: 0; font-variant-numeric: tabular-nums; margin: 1.3rem 0; }
+    /* Keep tables as display:table so columns auto-size to content (long text gets width,
+       short math columns stay narrow). A JS-inserted .table-scroll wrapper handles horizontal
+       overflow — setting the <table> itself to display:block breaks column distribution. */
+    .table-scroll { overflow-x: auto; max-width: 100%; margin: 1.3rem 0; -webkit-overflow-scrolling: touch; }
+    table { width: 100%; table-layout: auto; border-collapse: collapse; border-spacing: 0; font-variant-numeric: tabular-nums; margin: 1.3rem 0; }
+    .table-scroll > table { margin: 0; }
     thead th {
       font-family: var(--font-mono); font-weight: 500; font-size: .75rem; line-height: 1.3; color: var(--ink);
       text-align: left; padding: .55rem .75rem; border-bottom: 1px solid var(--stone); vertical-align: bottom;
@@ -160,6 +164,7 @@
           <li><a href="{{ '/essays/the-statistical-turn-in-trapped-ion-noise-diagnostics.html' | relative_url }}">Essay</a></li>
           <li><a href="{{ '/GLOSSARY.html' | relative_url }}">Glossary</a></li>
           <li><a href="{{ '/BIBLIOGRAPHY.html' | relative_url }}">Bibliography</a></li>
+          <li><a href="{{ '/source-notes.html' | relative_url }}">Source notes</a></li>
           <li><a href="{{ '/OUTREACH.html' | relative_url }}">Plain language</a></li>
           <li><a href="https://github.com/uwarring82/noise-diagnostics">GitHub</a></li>
         </ul>
@@ -183,5 +188,19 @@
       </div>
     </footer>
   </main>
+  <script>
+    /* Wrap each rendered Markdown table in a focusable horizontal-scroll region (CD .table-wrap)
+       so wide tables scroll instead of forcing page scroll, without breaking column layout. */
+    document.querySelectorAll('main .content table').forEach(function (t) {
+      if (t.parentElement && t.parentElement.classList.contains('table-scroll')) return;
+      var w = document.createElement('div');
+      w.className = 'table-scroll';
+      w.setAttribute('role', 'region');
+      w.setAttribute('tabindex', '0');
+      w.setAttribute('aria-label', 'Table, scrollable');
+      t.parentNode.insertBefore(w, t);
+      w.appendChild(t);
+    });
+  </script>
 </body>
 </html>

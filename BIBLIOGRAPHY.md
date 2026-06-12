@@ -10,7 +10,7 @@ Each entry pairs a **resolvable identifier** (DOI, or ISBN for books) with an
 open-access link where one exists. No copyrighted full text is committed (§0.1); the
 machine-readable record in [`references.bib`](references.bib) is the substitute.
 
-**Deeper notes.** Own-words notes on what each source contributes, with formulas in the Sail's notation, are in [`docs/source-notes.md`](https://github.com/uwarring82/noise-diagnostics/blob/main/docs/source-notes.md) (a §0.1 derived record).
+**Deeper notes.** Own-words notes on what each source contributes, with formulas in the Sail's notation, are in [**source notes**](https://uwarring82.github.io/noise-diagnostics/source-notes.html) (a §0.1 derived record).
 
 **Access key:** 🟢 = open access (arXiv / free host, link given) · 🔒 = paywalled
 (fetch the PDF from the publisher for reading; only the derived record lives here).
