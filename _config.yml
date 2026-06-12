@@ -16,7 +16,8 @@ kramdown:
 # assets, provenance, untracked sources, logbook, licences) is excluded.
 exclude:
   - tools/
-  - assets/
+  - assets/SOURCE.md      # serve assets/ (tokens.css, emblem, wordmark) but not its provenance/licence
+  - assets/LICENCE
   - docs/
   - archive/
   - logbook/
