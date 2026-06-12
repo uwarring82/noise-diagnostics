@@ -1,0 +1,29 @@
+name: FAIR §14A check
+
+# Runs the pinned §14A reference checker (tools/fair_check.sh) on every push and PR,
+# so the CI (machine) half of FR1–FR10 is enforced continuously, not just by a manual
+# run. The reviewer (human) half remains a person's job (§14A.9).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fair-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (full history for date/append-only predicates)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install cffconvert (enables full FR2 CFF-schema validation)
+        run: pipx install cffconvert || echo "cffconvert unavailable — checker will degrade to the structural cff-version check (still valid)"
+
+      - name: Run FAIR §14A reference checker
+        run: bash tools/fair_check.sh

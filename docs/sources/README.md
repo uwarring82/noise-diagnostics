@@ -40,9 +40,11 @@ controlled-lending (non-downloadable) copy.
 
 - **To obtain the book:** university/institutional library, interlibrary loan, or
   purchase (Cambridge University Press / 2013 paperback ISBN 9781107656499).
-- **Free legitimate substitute** for the Lévy–Khintchine background: D. Applebaum,
-  *Lévy Processes — From Probability to Finance and Quantum Groups*, Notices of the AMS
-  (Nov 2004), https://www.ams.org/notices/200411/fea-applebaum.pdf
+- **Free legitimate substitute — held locally** as `pdfs/applebaum2004.pdf`:
+  D. Applebaum, *Lévy Processes — From Probability to Finance and Quantum Groups*,
+  Notices of the AMS (Nov 2004), https://www.ams.org/notices/200411/fea-applebaum.pdf —
+  background reading for the Lévy–Khintchine material. It is a **companion**, not a
+  bibliography entry (the Sail does not cite it), so it has no `references.bib` key.
 
 ## Rebuilding the OA copies
 
