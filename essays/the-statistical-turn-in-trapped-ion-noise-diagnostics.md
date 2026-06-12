@@ -224,7 +224,7 @@ where $$\mathcal{D}_G$$ is the Gaussian diffusion superoperator and $$\mathcal{J
 
 #### 5.3 Lévy-Type (Heavy-Tailed) — Power-Law $$\nu(\Delta p)$$
 
-**Physical picture.** Jump-size distributions with power-law tails $$\nu(\Delta p) \propto |\Delta p|^{-1-\alpha}$$ for $$0 < \alpha < 2$$ produce divergent variance and anomalous diffusion $$\langle(\Delta x)^2\rangle \propto t^{2/\alpha}$$. Candidate mechanisms include Coulomb scattering on charged dust grains (long-range $$1/r^2$$ potential), micro-discharge events, cosmic-ray impacts, and possibly self-organised-critical surface-patch avalanches.
+**Physical picture.** Jump-size distributions with power-law tails $$\nu(\Delta p) \propto \lvert\Delta p\rvert^{-1-\alpha}$$ for $$0 < \alpha < 2$$ produce divergent variance and anomalous diffusion $$\langle(\Delta x)^2\rangle \propto t^{2/\alpha}$$. Candidate mechanisms include Coulomb scattering on charged dust grains (long-range $$1/r^2$$ potential), micro-discharge events, cosmic-ray impacts, and possibly self-organised-critical surface-patch avalanches.
 
 **Signature → Measurement → Inference → Mitigation lever**
 
@@ -418,7 +418,7 @@ The Decision Engine implies a richer reporting standard than the conventional $$
 2. The regime parameters $$\lambda\tau$$ and $$\mu$$ at the measurement conditions used.
 3. The identified operational class (Gaussian / compound-Poisson / Lévy-type / mixed / indeterminate) with confidence level.
 4. Higher-order cumulants $$\kappa_3$$, $$\kappa_4$$ (even if consistent with zero—the null result is informative).
-5. The full phonon distribution $$P(n|\tau)$$ or sufficient statistics thereof.
+5. The full phonon distribution $$P(n\mid\tau)$$ or sufficient statistics thereof.
 6. Validation status: which pillars passed, whether closure was achieved.
 
 A trap with low $$\dot{\bar{n}}$$ but Lévy-type statistics is, for quantum error correction purposes, potentially worse than a trap with higher $$\dot{\bar{n}}$$ but confirmed Gaussian statistics—because uncorrectable extreme events defeat standard error correction codes whilst Gaussian noise can be managed by conventional filtering and averaging.
