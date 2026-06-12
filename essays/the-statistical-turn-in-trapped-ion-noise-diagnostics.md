@@ -7,7 +7,8 @@ description: "From Heating Rates to a Decision Engine"
 <!--
 SPDX-License-Identifier: CC-BY-NC-SA-4.0
 SPDX-FileCopyrightText: 2026 U. Warring
-Authored Sail under T(h)reehouse +EC stewardship. Verbatim source of truth:
+Authored Sail under T(h)reehouse +EC stewardship. Source import (adapted for
+GitHub Pages rendering — see logbook):
 github.com/uwarring82/ions-in-freiburg @ 41059f9
   (essays/the-statistical-turn-in-trapped-ion-noise-diagnostics.md, 2026-02-20).
 Verified sources: BIBLIOGRAPHY.md. Folder/layer licences: root LICENCE.
@@ -30,7 +31,7 @@ Verified sources: BIBLIOGRAPHY.md. Folder/layer licences: root LICENCE.
 >
 > This document is a **Sail** (essay + handbook-facing protocol narrative) within the Open-Science Harbour. It is classified **Tier 2**: an operational synthesis that imports physics from Tier 1 coastlines and boundary conditions from Tier 0, but does not itself constitute a fundamental law or a novel theoretical result.
 >
-> _Authority flows from use, not endorsement._ The frameworks referenced herein—macroscopic QED, the Lévy–Khintchine decomposition, translation-covariant quantum Markov semigroups—are Tier 1 imports under local stewardship. Standard-Model electrodynamics and quantum mechanics are external coastlines referenced as constraints. No claim in this Sail exceeds the validity domain stated in §9.
+> _Authority flows from use, not endorsement._ The frameworks referenced herein—macroscopic QED, the Lévy–Khintchine decomposition, translation-covariant quantum Markov semigroups—are Tier 1 imports under local stewardship. Standard-Model electrodynamics and quantum mechanics are external coastlines referenced as constraints. No claim in this Sail exceeds the validity domain stated in §2.
 >
 > _Lock-Key separation applies._ The conceptual locks (three operational classes, two-scalar classifier, validation architecture) remain stable; interpretive keys (specific scattering models, mitigation strategies, shot-count estimates) remain free and revisable.
 >
@@ -56,13 +57,13 @@ The reduction of complex environmental dynamics to a single scalar discards the 
 
 #### 1.3 Statistical Universality Hypothesis (bounded)
 
-Within the validity domain of single-ion harmonic confinement, linear electromagnetic coupling, Markovian bath dynamics, and stationary noise statistics (§9), we advance the following bounded hypothesis: all electromagnetically coupled noise sources acting on a trapped ion's motional degree of freedom fall into one of three operational classes, distinguished by the statistical character of the environmental current sources $$\mathbf{J}(\mathbf{r}, t)$$ that drive the fields. These classes—Gaussian (diffusive), compound-Poisson (jump-dominated), and Lévy-type (heavy-tailed)—arise from the Lévy–Khintchine decomposition of infinitely divisible processes and are exhaustive within the stated domain. The classification is operational: it determines which observables are informative and which measurement strategies are optimal, independently of the microscopic identity of the source.
+Within the validity domain of single-ion harmonic confinement, linear electromagnetic coupling, Markovian bath dynamics, and stationary noise statistics (§2), we advance the following bounded hypothesis: all electromagnetically coupled noise sources acting on a trapped ion's motional degree of freedom fall into one of three operational classes, distinguished by the statistical character of the environmental current sources $$\mathbf{J}(\mathbf{r}, t)$$ that drive the fields. These classes—Gaussian (diffusive), compound-Poisson (jump-dominated), and Lévy-type (heavy-tailed)—arise from the Lévy–Khintchine decomposition of infinitely divisible processes and are exhaustive within the stated domain. The classification is operational: it determines which observables are informative and which measurement strategies are optimal, independently of the microscopic identity of the source.
 
 This hypothesis does _not_ claim universality across all quantum systems, all coupling mechanisms, or all decoherence channels. It is restricted to motional decoherence of a single trapped ion under electromagnetic coupling within the Markov-accessible zone defined below.
 
 #### 1.4 Deliverable: Decision Engine and validation separation
 
-The primary deliverable of this Sail is the **Decision Engine** (§7)—a procedural protocol that converts abstract statistical classification into a linear sequence of experimental decisions. The secondary deliverable is the **Validation Architecture** (§8), which enforces rigorous separation between inference validity (did we identify the correct statistical class?) and physical predictability (does the identified class match the microscopic model?), joined by a mandatory consistency closure test.
+The primary deliverable of this Sail is the **Decision Engine** (§6)—a procedural protocol that converts abstract statistical classification into a linear sequence of experimental decisions. The secondary deliverable is the **Validation Architecture** (§7), which enforces rigorous separation between inference validity (did we identify the correct statistical class?) and physical predictability (does the identified class match the microscopic model?), joined by a mandatory consistency closure test.
 
 ***
 
@@ -91,7 +92,7 @@ When a Tier-0 boundary condition fails, the Decision Engine does not produce und
 
 > **To the reader.** This document is a Tier-2 operational guide. It synthesises established physics (Tier 1) into a practical classification protocol, bounded by explicit assumptions (Tier 0). It does _not_ introduce new fundamental physics, claim exhaustive coverage beyond the stated domain, or guarantee that the Decision Engine will correctly classify noise under conditions violating the boundary conditions listed above.
 >
-> When the Engine says "Gaussian," it means: _within the Markov-accessible zone, under harmonic confinement, with stationary statistics, the data are consistent with the Gaussian operational class at the stated confidence level._ The Engine's output is a provisional classification subject to the three-pillar validation of §8.
+> When the Engine says "Gaussian," it means: _within the Markov-accessible zone, under harmonic confinement, with stationary statistics, the data are consistent with the Gaussian operational class at the stated confidence level._ The Engine's output is a provisional classification subject to the three-pillar validation of §7.
 >
 > The Decision Engine is a tool for structuring experimental enquiry, not a substitute for physical judgement. Proceed accordingly.
 
@@ -103,7 +104,7 @@ The interaction between a trapped ion at equilibrium position $$\mathbf{r}_0$$ a
 
 
 $$
-H_\text{int} = -qx , E_x(\mathbf{r}_0, t),
+H_\text{int} = -qx \, E_x(\mathbf{r}_0, t),
 $$
 
 
@@ -111,7 +112,7 @@ where $$E_x$$ is the $$x$$-component of the electric field. The field is not an 
 
 
 $$
-E_x(\mathbf{r}_0, \omega) = i\mu_0 \omega \int \mathrm{d}^3 r ; G_{x\alpha}(\mathbf{r}_0, \mathbf{r}; \omega) , J_\alpha(\mathbf{r}, \omega).
+E_x(\mathbf{r}_0, \omega) = i\mu_0 \omega \int \mathrm{d}^3 r \; G_{x\alpha}(\mathbf{r}_0, \mathbf{r}; \omega) \, J_\alpha(\mathbf{r}, \omega).
 $$
 
 
@@ -119,7 +120,7 @@ The force spectrum entering the master equation is
 
 
 $$
-S_F(\omega) = q^2 \int \mathrm{d}^3 r , \mathrm{d}^3 r' ; G_{x\alpha}(\mathbf{r}_0, \mathbf{r}; \omega) , S_{JJ}^{\alpha\beta}(\mathbf{r}, \mathbf{r}'; \omega) , G_{x\beta}^*(\mathbf{r}_0, \mathbf{r}'; \omega).
+S_F(\omega) = q^2 \int \mathrm{d}^3 r \, \mathrm{d}^3 r' \; G_{x\alpha}(\mathbf{r}_0, \mathbf{r}; \omega) \, S_{JJ}^{\alpha\beta}(\mathbf{r}, \mathbf{r}'; \omega) \, G_{x\beta}^*(\mathbf{r}_0, \mathbf{r}'; \omega).
 $$
 
 
@@ -200,7 +201,7 @@ where $$\mathcal{D}_G$$ is the Gaussian diffusion superoperator and $$\mathcal{J
 
 | Element                                          | Detail                                                                                                                                                                                                                                                                    |
 | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Signature**                                    | Linear heating $$\bar{n}(t) = \bar{n}_0 + \dot{\bar{n}},t$$; thermal phonon distribution $$P(n) \propto \bar{n}^n/(\bar{n}+1)^{n+1}$$; vanishing higher-order cumulants $$\kappa_3 \approx 0$$, $$\kappa_4 \approx 0$$; Allan variance $$\sigma_A^2(\tau) \propto \tau^{-1}$$. |
+| **Signature**                                    | Linear heating $$\bar{n}(t) = \bar{n}_0 + \dot{\bar{n}}\,t$$; thermal phonon distribution $$P(n) \propto \bar{n}^n/(\bar{n}+1)^{n+1}$$; vanishing higher-order cumulants $$\kappa_3 \approx 0$$, $$\kappa_4 \approx 0$$; Allan variance $$\sigma_A^2(\tau) \propto \tau^{-1}$$. |
 | **Measurement**                                  | Power spectral density $$S_E(\omega)$$ via sideband heating-rate scans at multiple frequencies; sideband asymmetry mapping; Ramsey coherence decay envelopes.                                                                                                              |
 | **Inference**                                    | $$\dot{\bar{n}} \approx q^2 S_E(\omega_t)/(4m\hbar\omega_t)$$. Spectral shape (white, $$1/f^\alpha$$, Lorentzian) identifies source class. Dephasing separately from low-frequency $$S_{\delta\omega}(\Omega)$$.                                                           |
 | **Mitigation lever** _(handbook-level strategy)_ | Reduce source amplitude (lower temperature, lower electrode resistance); spectral filtering (dynamical decoupling for dephasing); geometric optimisation (increase ion–surface distance to exploit $$\mathbf{G}$$ scaling).                                                 |
@@ -209,7 +210,7 @@ where $$\mathcal{D}_G$$ is the Gaussian diffusion superoperator and $$\mathcal{J
 
 #### 5.2 Compound-Poisson (Jump-Dominated) — $$\lambda\tau \sim 1$$ to $$\ll 1$$
 
-**Physical picture.** Discrete, independent events deliver momentum kicks $$\Delta p$$ drawn from a distribution $$\nu(\Delta p)$$ with finite variance. Each kick implements the unitary displacement $$U_{\Delta p} = \exp[-i\Delta p , x/\hbar]$$, simultaneously changing the ion's energy and phase. Sources include background-gas collisions (Langevin, hard-sphere, resonant charge exchange), single-photon recoil at low flux, and bistable fluctuators (telegraph noise).
+**Physical picture.** Discrete, independent events deliver momentum kicks $$\Delta p$$ drawn from a distribution $$\nu(\Delta p)$$ with finite variance. Each kick implements the unitary displacement $$U_{\Delta p} = \exp[-i\Delta p \, x/\hbar]$$, simultaneously changing the ion's energy and phase. Sources include background-gas collisions (Langevin, hard-sphere, resonant charge exchange), single-photon recoil at low flux, and bistable fluctuators (telegraph noise).
 
 **Signature → Measurement → Inference → Mitigation lever**
 
@@ -232,7 +233,7 @@ where $$\mathcal{D}_G$$ is the Gaussian diffusion superoperator and $$\mathcal{J
 | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Signature**                                    | Power-law tails $$P(\Delta n) \propto \lvert\Delta n\rvert^{-1-\alpha}$$ ($$0 < \alpha < 2$$); divergent variance; anomalous diffusion $$\langle(\Delta x)^2\rangle \propto t^{2/\alpha}$$; rare extreme excursions dominate single-shot histograms; CCDF linear on log–log axes. |
 | **Measurement**                                  | Large-$$N$$ single-shot datasets ($$\sim 10^5\text{–}10^6$$ shots); complementary cumulative distribution function (CCDF) on log–log scale; tail-exponent estimation (Hill estimator or maximum-likelihood stable-law fit); i.i.d. vs. clustered test (autocorrelation of extreme events).                                                                                                                                                                                                                     |
-| **Inference**                                    | Stability parameter $$\alpha$$ from tail fit. **Feasibility gate applies** (see §7 and §8.4): tail-exponent inference requires $$N_\text{ev} \gtrsim 10^3\text{–}10^4$$ events in the tail, implying acquisition time $$T_\text{acq} \sim N_\text{ev}/(\lambda d)$$ where $$d$$ is the tail-exceedance fraction. Beyond the stability horizon ($$T_\text{acq}$$ exceeds practical drift-free measurement windows), downgrade to **detection-only**: report "heavy tails detected" without quantitative $$\alpha$$. |
+| **Inference**                                    | Stability parameter $$\alpha$$ from tail fit. **Feasibility gate applies** (see §6 and §7.4): tail-exponent inference requires $$N_\text{ev} \gtrsim 10^3\text{–}10^4$$ events in the tail, implying acquisition time $$T_\text{acq} \sim N_\text{ev}/(\lambda d)$$ where $$d$$ is the tail-exceedance fraction. Beyond the stability horizon ($$T_\text{acq}$$ exceeds practical drift-free measurement windows), downgrade to **detection-only**: report "heavy tails detected" without quantitative $$\alpha$$. |
 | **Mitigation lever** _(handbook-level strategy)_ | Averaging is counterproductive (rare catastrophic events contaminate the mean). Use robust statistics (median, trimmed mean); threshold-based rejection of extreme excursions; erasure-conversion protocols in quantum error correction; reduce defect density (a single Lévy-type defect can dominate even in otherwise clean systems).                                                                                                                                                                   |
 
 **Critical distinction:** Lévy-type heavy tails do _not_ automatically imply long memory. A Lévy process can be i.i.d. (memoryless jumps with heavy-tailed sizes) or clustered (correlated inter-event times). The i.i.d. vs. clustered distinction must be tested explicitly via autocorrelation of exceedances. Clustering would indicate a non-Markov component and trigger the $$\mu$$-gate degradation.
@@ -288,7 +289,7 @@ DECISION ENGINE v1.0
                Test i.i.d. vs. clustered (autocorrelation of exceedances).
                If clustered → flag non-Markov contribution; re-check μ gate.
 
- 10.  VALIDATE via three-pillar architecture (§8).
+ 10.  VALIDATE via three-pillar architecture (§7).
       Pillar 1: confusion matrix at achieved N.
       Pillar 2: physical-model benchmark (G-tensor scaling, pressure dependence).
       Pillar 3: consistency closure (σ_tot test).
@@ -377,7 +378,7 @@ Estimating the stability parameter $$\alpha$$ from tail data requires sufficient
 
 
 $$
-T_\text{acq} \sim \frac{N_\text{ev}}{\lambda , d},
+T_\text{acq} \sim \frac{N_\text{ev}}{\lambda \, d},
 $$
 
 
@@ -425,7 +426,7 @@ A trap with low $$\dot{\bar{n}}$$ but Lévy-type statistics is, for quantum erro
 
 #### Protocol reference
 
-This Sail is designed to serve as a protocol reference: the Decision Engine (§7) provides the operational flowchart; the validation architecture (§8) provides the quality assurance; the glossary (Appendix A) provides the shared vocabulary. Together, they define a reproducible methodology for statistical noise characterisation that can be adopted across laboratories without requiring each group to independently derive the underlying theory.
+This Sail is designed to serve as a protocol reference: the Decision Engine (§6) provides the operational flowchart; the validation architecture (§7) provides the quality assurance; the glossary (Appendix A) provides the shared vocabulary. Together, they define a reproducible methodology for statistical noise characterisation that can be adopted across laboratories without requiring each group to independently derive the underlying theory.
 
 ***
 
@@ -475,7 +476,7 @@ This Sail is designed to serve as a protocol reference: the Decision Engine (§7
 | "all EM noise" (unbounded)                                     | "all electromagnetically coupled noise within the validity domain of §2"                            |
 | "exhaustive" (unbounded)                                       | "exhaustive within the Markov-accessible zone under harmonic confinement and stationary statistics" |
 | "universal" (unbounded)                                        | "universal within the domain of single-ion motional decoherence under linear EM coupling"           |
-| "the Lévy exponent is $$\alpha = \ldots$$" (without feasibility) | "the Lévy exponent is estimated as $$\alpha = \ldots$$ subject to the feasibility gate of §7/§8.4"    |
+| "the Lévy exponent is $$\alpha = \ldots$$" (without feasibility) | "the Lévy exponent is estimated as $$\alpha = \ldots$$ subject to the feasibility gate of §6/§7.4"    |
 | "Pillars 1 and 2 confirm…" (without closure)                   | "Pillars 1, 2, and 3 (consistency closure) confirm…"                                                |
 | "determines the regime" ($$\lambda\tau$$ alone)                  | "$$\lambda\tau$$, jointly with the Markov gate $$\mu$$, determines the accessible regime"               |
 | "noise spectroscopy" (implying completeness)                   | "statistical noise characterisation within the operational framework"                               |
