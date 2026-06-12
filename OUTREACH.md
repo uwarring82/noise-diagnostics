@@ -1,3 +1,8 @@
+---
+layout: default
+title: "About this project"
+---
+
 # About this project — in plain language
 
 Status: draft — 2026-06-12

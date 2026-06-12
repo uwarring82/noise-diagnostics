@@ -1,3 +1,8 @@
+---
+layout: default
+title: "Bibliography"
+---
+
 # Bibliography
 
 Each entry pairs a **resolvable identifier** (DOI, or ISBN for books) with an

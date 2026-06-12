@@ -1,0 +1,30 @@
+# GitHub Pages (Jekyll, deploy-from-branch) configuration.
+# Renders the Sail and its FAIR companion documents. Math: kramdown emits
+# <script type="math/tex"> for $$...$$, which MathJax (loaded in the layout) renders.
+title: "Noise Diagnostics — The Statistical Turn"
+description: "An operational framework (the Decision Engine) for classifying trapped-ion motional noise into three statistical classes."
+url: "https://uwarring82.github.io"
+baseurl: "/noise-diagnostics"
+lang: en
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Only the public-facing documents are part of the site; everything else (tooling,
+# assets, provenance, untracked sources, logbook, licences) is excluded.
+exclude:
+  - tools/
+  - assets/
+  - docs/
+  - archive/
+  - logbook/
+  - references.bib
+  - CITATION.cff
+  - LICENCE
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .github/
